@@ -116,13 +116,14 @@ let i1 = 2;
 let j1 = 1;
 
 getSum(i1, j1)
-    .then(function (element) {
-        double(element), 
-    result => console.log(result);
-    });
-    //.then(factorial)
-   
-    //.catch(errorHandler);*/
+    .then(function (responce) {
+        console.log(responce);
+        return double(responce);
+    })
+    .then(result => {
+        console.log(result);
+    })
+
 
 
 function getSum(num1, num2) {
@@ -140,3 +141,5 @@ function double(num1) {
         }, 2000)
     });
 }
+
+
